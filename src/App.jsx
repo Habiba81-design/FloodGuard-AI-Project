@@ -123,7 +123,7 @@ export default function App() {
         </div>
 
         <div style={{ display:"flex", gap:4, borderTop:`1px solid ${LINE}`, borderBottom:`1px solid ${LINE}`, marginBottom:28, overflowX:"auto" }}>
-          {[ ["intelligence","Flood Intelligence",BarChart3], ["intervention","Intervention",Wrench], ["alerts","Predictive Alerts",Bell], ["history","Alert History",FileText] ].map(([key,label,Icon]) => (
+          {[ ["intelligence","Flood Intelligence",BarChart3], ["intervention", ["alerts","Predictive Alerts",Bell], ["history","Alert History",FileText] ].map(([key,label,Icon]) => (
             <button key={key} onClick={() => setView(key)} style={{ display:"flex", alignItems:"center", gap:7, padding:"13px 16px", border:"none", borderBottom:view===key?`2px solid ${WATER}`:"2px solid transparent", background:view===key?ROW_ACTIVE:"transparent", color:view===key?INK:MUTED, fontFamily:"inherit", fontSize:13, fontWeight:view===key?700:500, cursor:"pointer", whiteSpace:"nowrap" }}><Icon size={15}/>{label}</button>
           ))}
         </div>
